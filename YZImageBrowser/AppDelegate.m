@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <BUAdSDK/BUAdSDK.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<BUSplashAdDelegate>
 
 @end
 
@@ -16,7 +17,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [BUAdSDKManager setAppID:@"5028412"];
+//    [BUAdSDKManager setIsPaidApp:NO];
+//    [BUAdSDKManager setLoglevel:BUAdSDKLogLevelDebug];
+//
+//    CGRect frame = [UIScreen mainScreen].bounds;
+//    BUSplashAdView *splashView = [[BUSplashAdView alloc] initWithSlotID:@"900721489" frame:frame];
+//    splashView.delegate = self;
+//    UIWindow *keyWindow = [UIApplication sharedApplication].windows.firstObject;
+//    [splashView loadAdData];
+//    [keyWindow.rootViewController.view addSubview:splashView];
+//    splashView.rootViewController = keyWindow.rootViewController;
     return YES;
 }
 
